@@ -22,4 +22,9 @@ o	Getting Data and Code from wherever it sits today
 Cloud formation cannot manage Configuration management. It can only provision resources.
 Configuration Management – Chef, Puppet, CodeDeploy
 Imperative (API vs SDK) vs Declarative (Cloud Formation) ?
- 
+Cloud Formation can take a template and creates a stack - stack contains all the resources and are in an integrated fashion(resources)
+- One template can make n no of stacks
+
+- Vegas Principle - Cloud Formation works will stack as a whole. (Stack is a collection of resources in an integrated fashion)
+- Cloud Formation makes sure that all the resource in the stack are in active state, if it fails to do so even for one resurce, it will delete the stack.
+- The above statement also holds true in the case of updates.
