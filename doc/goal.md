@@ -20,7 +20,7 @@ o	Getting Data and Code from wherever it sits today
 -	Also need to scale the cluster
 
 Cloud formation cannot manage Configuration management. It can only provision resources.
-Configuration Management – Chef, Puppet, CodeDeploy
+Configuration Management – Chef, Puppet, CodeDeploy (For Software Installation)
 Imperative (API vs SDK) vs Declarative (Cloud Formation) ?
 Cloud Formation can take a template and creates a stack - stack contains all the resources and are in an integrated fashion(resources)
 - One template can make n no of stacks
@@ -28,3 +28,10 @@ Cloud Formation can take a template and creates a stack - stack contains all the
 - Vegas Principle - Cloud Formation works will stack as a whole. (Stack is a collection of resources in an integrated fashion)
 - Cloud Formation makes sure that all the resource in the stack are in active state, if it fails to do so even for one resurce, it will delete the stack.
 - The above statement also holds true in the case of updates.
+
+In Rollback will it make sure every extra resource is deleted?
+S3 cannot be deleted if it has files/versioning 
+In such cases Cloud Formation reports such issues later
+We can have a explicit deletion policy as to all but one/or more resources that need not be deleted
+
+
